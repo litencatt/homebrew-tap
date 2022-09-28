@@ -5,25 +5,25 @@
 class Uniar < Formula
   desc "uniar is UNI'S ON AIR music and scene cards database and manage your scene cards collection tool."
   homepage "https://github.com/litencatt/uniar"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
   depends_on :macos
 
   on_macos do
-    url "https://github.com/litencatt/uniar/releases/download/v0.2.1/uniar_v0.2.1_darwin_amd64.zip"
-    sha256 "026e47b9ae4f9475a0e9702edc3e81d80b6e1bf18d27b8e1b34f1beb53f17ffc"
-
-    def install
-      bin.install "uniar"
-    end
-
     if Hardware::CPU.arm?
-      def caveats
-        <<~EOS
-          The darwin_arm64 architecture is not supported for the Uniar
-          formula at this time. The darwin_amd64 binary may work in compatibility
-          mode, but it might not be fully supported.
-        EOS
+      url "https://github.com/litencatt/uniar/releases/download/v0.3.0/uniar_v0.3.0_darwin_arm64.zip"
+      sha256 "edcb3e1cd283c0a74bcc7cc9a02f99b5705e7a3d7bc29e815dac182bcb1ec00a"
+
+      def install
+        bin.install "uniar"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/litencatt/uniar/releases/download/v0.3.0/uniar_v0.3.0_darwin_amd64.zip"
+      sha256 "9e0d976482a9eb985b049650ca92638ea47c75257992f7657d1583b21fafd150"
+
+      def install
+        bin.install "uniar"
       end
     end
   end
