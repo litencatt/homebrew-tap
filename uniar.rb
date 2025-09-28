@@ -5,21 +5,21 @@
 class Uniar < Formula
   desc "uniar is UNI'S ON AIR music and scene cards database and manage your scene cards collection tool."
   homepage "https://github.com/litencatt/uniar"
-  version "0.19.5"
+  version "0.20.0"
   license "MIT"
   depends_on :macos
 
   on_intel do
-    url "https://github.com/litencatt/uniar/releases/download/v0.19.5/uniar_v0.19.5_darwin_amd64.zip"
-    sha256 "be1da92bad4214a77412d920e395bc9c3622efd34e8c76a127aba7856806da00"
+    url "https://github.com/litencatt/uniar/releases/download/v0.20.0/uniar_v0.20.0_darwin_amd64.zip"
+    sha256 "1e66753d62ff40ba2c47dff05d1aa366baf3cc002c6d1e6481b993fcffcbcd4d"
 
     def install
       bin.install "uniar"
     end
   end
   on_arm do
-    url "https://github.com/litencatt/uniar/releases/download/v0.19.5/uniar_v0.19.5_darwin_arm64.zip"
-    sha256 "ba8e0db6747599af7758fcf22f9aca4872fd87e4ebd80dfc1a9d5b555b277509"
+    url "https://github.com/litencatt/uniar/releases/download/v0.20.0/uniar_v0.20.0_darwin_arm64.zip"
+    sha256 "30d1f67991565317da9e73efa7d0153695d67d2b1a58b0ca96333c52711c9d38"
 
     def install
       bin.install "uniar"
